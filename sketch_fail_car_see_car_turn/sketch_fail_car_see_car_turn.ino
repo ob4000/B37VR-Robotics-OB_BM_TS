@@ -10,13 +10,13 @@
         GND: GND
  */
  // Define the pin numbers on which the outputs are generated.
-#define MOT_A1_PIN 5
-#define MOT_A2_PIN 6
+#define MOT_A1_PIN 5 //left wheel
+#define MOT_A2_PIN 6 //right wheel
 #define MOT_B1_PIN 9
 #define MOT_B2_PIN 10
+#define int trigPin = 11//Trig
+#define int echoPin = 12//Echo
 
-int trigPin = 11;    //Trig - green Jumper
-int echoPin = 12;    //Echo - yellow Jumper
 long duration, cm, inches;
 int leftServoSpeed = 200;
 int rightServoSpeed = 200;
