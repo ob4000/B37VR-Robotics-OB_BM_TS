@@ -16,9 +16,9 @@ NewPing sonar(TRIGGER_PIN, ECHO_PIN, MAX_DISTANCE);
 /* variables for the speed of motors */
 int leftServoSpeed = 200-23+25-3+1;
 int rightServoSpeed = 200-25-10;
- 
+ //guess what
 void setup()
-{//guess what
+{
   // Initialize the stepper driver control pins to output drive mode.
   pinMode(MOT_A1_PIN, OUTPUT);
   pinMode(MOT_A2_PIN, OUTPUT);
