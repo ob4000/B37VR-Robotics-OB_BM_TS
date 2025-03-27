@@ -1,8 +1,8 @@
 
 #include <NewPing.h>
 
-#define TRIGGER_PIN 11//dist sensor
-#define ECHO_PIN 12//   dist sensor
+#define TRIGGER_PIN 12//dist sensor
+#define ECHO_PIN 11//   dist sensor
 #define MAX_DISTANCE 200
 
 #define MOT_A1_PIN 5//right wheel
