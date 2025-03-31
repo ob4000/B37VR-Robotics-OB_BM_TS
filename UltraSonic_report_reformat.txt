@@ -1,0 +1,48 @@
+Ultrasonic Sensor Characterisation
+Ben Moody - B37VR - Robotics group project
+
+Introduction
+
+The main aim of this report is to characterise an ultrasonic sensor. The purpose of the ultrasonic sensor is to watch for obstacles, then the Arduino onboard the car will guide the car in a direction other than the obstacle. This is achieved by the sensor constantly sending high pitch audio waves and then detecting the returning waves to calculate distance. The Arduino onboard will then direct the car away from the obstacle and make another check for an obstacle using the ultrasonic sensor, this repeats until there is no obstacle and the car will continue moving forward until another obstacle is detected. The ultrasonic sensor has a maximum effective range of 4m and measuring angle of 30 degrees [1], This experiment is in place to see if different materials change how accurate the sensor is.
+
+Theory
+
+The ultrasonic sensor has an "echo" pin and a "trig"(trigger) pin, When the Trig pin receives a pulse of 5v for at least 10us, the sensor will emit ultrasonic bursts at a frequency of 40kHz(Hertz) and then wait for these signals to bounce off of surrounding material and be reflected back to the sensor. When the sensor receives this signal it then sets the echo pin to 5v, the difference in time that the trig pin is set and the echo pin is set can be used to calculate the distance of the closest object in the sensors range. The calculation used for this is: time/58 = distance in cm (time being the width of the echo pin pulse).
+
+Experimental Method
+
+The sensor is connected to an Arduino board via 4 wires, one for 5v, one to connect to ground and two information buses for the echo and trig pins.
+The Arduino is programmed to loop "pinging" the sensor by sending a 5v pulse through the echo pin and waiting for a response or a null response then sending another 5v pulse. After every loop the arduino sends a message to the user terminal with the distance the sensor returned in cm. 
+The sensor is set up at one end of a tape measure,sensor facing forward along the measure, elevated roughly 5cm. Items of different densities are placed at different points along this tape measure and the real distance is compared to the distance returned by the sensor. 3 different objects were used; a cardboard box, a fabric bag and a pile of cables. The cardboard box was chosen as it is a reasonably solid material that would reflect sound quite well, and is therefore a reasonable constant. The fabric bag would likely absorb some sound and the pile of cables would be a test for how well the sensor detects high density thin objects. All three objects are placed at set distances from the sensor one at a time and the output distance recorded.
+
+Results
+
+cardboard box:
+actual distance(cm):
+30,60,120
+returned distance(cm):
+30,60,122
+
+fabric bag:
+actual distance(cm):
+30,60,120
+returned distance(cm):
+32,63,123
+
+pile of cables:
+actual distance(cm):
+30,60,120
+returned distance(cm):
+29,55,119
+
+Discussion
+
+The results indicate that softer materials may cause the sensor to detect that objects are slightly further away than they actually are, This discrepancy is likely due to the material absorbing some energy from the noise or not reflecting it in the sensors direction. This might indicate that a super absorbant material may be able to completely absorb the noise and avoid detection by the sensor. The pile of cables returning a slightly lower distance may be caused by non sterile lab environment, and also that the cables are not a flat object and what small amount that was placed infront of the distance was detected. This indicated that cables of around .75cm diameter are very visable to the sensor, as that was the diameter of that used in the experiment
+
+Conclusion
+
+The sensor can clearly detect objects placed directly in front of it made of a solid material up to a distance of at least 120cm. Less dense objects can cause more discrepancy in the actual and returned distance.
+
+References
+
+(1) HC-SR04 Product User's Manual
