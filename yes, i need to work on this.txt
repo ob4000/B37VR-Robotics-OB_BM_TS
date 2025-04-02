@@ -1,0 +1,18 @@
+introduction
+-aims
+ -characterise and assemble components that together make a cool robot
+ -find efficient solution to the computer side of things
+-summary of results
+ -distance sensor objects closer more accurate, angle of detection
+ -ldr 
+ -infrared sensors closer to operating distance, better results
+
+
+This reports aim is the characterisation and design decisions behind three sensors attached to a small buggy that give it the ability to autonomously navigate a controlled environment. The sensor used to avoid objects in its path is an ultrasonic distance sensor which uses pulses of ultrasonic noise to detect objects in the path of the buggy, then using that information the buggy will find a path other than that which the obstacle is in. Two light dependant resistors (LDR's) are used to follow strong sources of light and three ultravoilet sensors attached allow the buggy to follow reflective strips on the ground underneath it. The tests will be to find the optimal distance and range at which the sensor can detect an obstacle. 
+
+This report will show the charecterisation of each sensor, the results of experiments enacted to enable the characterisation and the other design aspects that were added to the buggy during development. 
+
+conclusion
+-conclusion pulled from results
+-summary of results
+-
