@@ -8,11 +8,63 @@ introduction
  -infrared sensors closer to operating distance, better results
 
 
-This reports aim is the characterisation and design decisions behind three sensors attached to a small buggy that give it the ability to autonomously navigate a controlled environment. The sensor used to avoid objects in its path is an ultrasonic distance sensor which uses pulses of ultrasonic noise to detect objects in the path of the buggy, then using that information the buggy will find a path other than that which the obstacle is in. Two light dependant resistors (LDR's) are used to follow strong sources of light and three ultravoilet sensors attached allow the buggy to follow reflective strips on the ground underneath it. The tests will be to find the optimal distance and range at which the sensor can detect an obstacle. 
+This report's aim is characterisation and design decisions behind three sensors attached to a small buggy that give it the ability to autonomously navigate a controlled environment. The sensor used to avoid objects in its path is an ultrasonic distance sensor which uses pulses of ultrasonic noise to detect objects in the path of the buggy, then using that information the buggy will find a path other than that which the obstacle is in. Two light dependant resistors (LDR's) are used to follow strong sources of light and three ultraviolet sensors attached, allow the buggy to follow reflective strips on the ground underneath it. The tests will be to find the optimal distance and range at which the sensor can detect an obstacle. 
 
-This report will show the charecterisation of each sensor, the results of experiments enacted to enable the characterisation and the other design aspects that were added to the buggy during development. 
+This report will show the characterisation of each sensor, the results of experiments enacted to enable the characterisation and the other design aspects that were added to the buggy during development. 
 
 conclusion
 -conclusion pulled from results
 -summary of results
--
+-comments on succesfullness
+
+Conclusion
+
+The buggy was successful in it's task of navigating each environment and following strong sources of light. The results from experiments for the IR sensors indicate they are more effective the more the difference in surface reflection is of the line and surrounding area. Each sensor had marginally different responses, all higher on reflective mediums such as the black tape used for the lines to follow, and much lower on the cardboard the tape was on. With the distances change in height where height is inversely proportional to the magnitude of the readings. The optimal height would be as listed in the data sheet to be 2.5mm[1].
+Objects of high density were the most readily recognisable by the ultrasonic sensor, the above data supots this claim. The sensor struggles to accurately display the location of objects either of a lower density or at a further distance than 120cm away. Fabric, sponge and other low density materials may decieve the sensor into produceing an output that indicates a higher distance than what is accurate.The size of the obstacle is not extrememly relevant as even thin wires were easily detected. A further possition back on the buggy would provide a range of detection that fully covers the rover but a further position forward provides more accurate readings. The maximum range of 3m(300cm)[3] is unnused but could be if we wanted the buggy to avoid further away objects.
+The LDR's are extremely simple compared to the other sensors and their effectiveness lies entierely on the programming of the attached computer. They are susceptible to large fluctuations under normal use which may cause inneficiencies but this is hardly relevant. They require tuning in the form of resistors which affect the reading from the ldr where the higher the resistance the higher the light level must be to produce a jigh output.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
